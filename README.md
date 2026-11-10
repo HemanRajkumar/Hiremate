@@ -1,323 +1,257 @@
-# 💼 HireMate v1.0.0
-
 <div align="center">
+
+# HireMate
 
 ### AI-Powered Resume Intelligence Platform
 
-Analyze your resume against any job description, optimize ATS compatibility, discover skill gaps, receive AI-powered career insights, and prepare for your next interview.
+**Understand your resume. Identify skill gaps. Prepare for your next opportunity.**
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red.svg)
-![Groq](https://img.shields.io/badge/Groq-LLM-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Version](https://img.shields.io/badge/Version-v1.0.0-success.svg)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-AI%20Integration-111827?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-2563EB?style=for-the-badge)
 
 </div>
 
 ---
 
-# 🚀 Overview
+## Overview
 
-HireMate is an AI-powered Resume Intelligence Platform designed to help students, fresh graduates, and professionals improve their resumes before applying for jobs.
+HireMate is a resume intelligence application built with Python and Streamlit. It helps job seekers evaluate how their resume aligns with a target role, understand missing skills, improve resume content, and prepare for interviews.
 
-Instead of providing only an ATS score, HireMate performs an end-to-end resume analysis pipeline that includes:
+The application combines resume parsing, job-description analysis, ATS-oriented comparisons, career guidance, and AI-assisted content generation in one workspace.
 
-- Resume Parsing
-- ATS Compatibility Analysis
-- Skill Gap Detection
-- AI Resume Review
-- Resume Rewrite
-- Career Intelligence
-- Company Matching
-- Learning Roadmap
-- Certification Recommendations
-- Interview Preparation
-- AI Cover Letter Generation
+## Design
 
----
+HireMate uses a **black, white, and blue** visual theme:
 
-# ✨ Features
+- Near-black backgrounds for the main application.
+- White typography for clear hierarchy and readability.
+- Electric blue accents for primary actions, active navigation, and highlights.
+- Charcoal surfaces and subtle borders for cards and content sections.
+- Responsive layouts intended for desktop, tablet, and mobile screens.
 
-## 📄 Resume Intelligence
+## Features
 
-- Resume Parsing
-- Candidate Profile Extraction
-- Education Detection
-- Experience Detection
-- Project Extraction
-- Skill Classification
-- Resume Metadata Generation
+### Resume analysis
+- Upload and parse a PDF resume.
+- Extract candidate information, education, experience, projects, and skills.
+- Review resume content and detected profile information.
 
----
+### Target-role and ATS analysis
+- Upload a target job description as a PDF or TXT file.
+- Compare resume skills with the requirements in the job description.
+- View matched skills and missing skills.
+- Review ATS-oriented scores and analysis results.
 
-## 🎯 ATS Analysis
+### Resume improvement
+- Review resume strengths and areas that may need improvement.
+- Get AI-assisted suggestions for improving resume content.
+- Generate an ATS-oriented rewrite of resume sections.
 
-- ATS Compatibility Score
-- Resume Match Percentage
-- Matched Skills
-- Missing Skills
-- Additional Skills
-- ATS Breakdown
-- Resume Grade
+### Career intelligence
+- Explore skill gaps related to a target role.
+- Review learning-roadmap recommendations.
+- Explore career guidance, company-match suggestions, and certification recommendations where available in the application.
 
----
+### Interview preparation
+- Generate role- and resume-related interview practice questions.
+- Prepare for technical, behavioral, and HR interview topics.
 
-## 🤖 AI Resume Intelligence
+### Documents
+- Generate supporting application content, including AI-assisted cover-letter content where configured.
+- Review and export generated content using the available document actions.
 
-- AI Resume Summary
-- AI Resume Review
-- Resume Strength Analysis
-- Personalized Recommendations
-- Recruiter Perspective
-- Resume Rewrite (ATS Optimized)
+> Feature availability and generated results depend on the configured services, uploaded documents, and the current application implementation.
 
----
+## Technology stack
 
-## 🚀 Career Intelligence
+| Area | Technologies |
+|---|---|
+| Application UI | Streamlit |
+| Core language | Python |
+| AI integration | Groq API |
+| Resume and document parsing | PDF parsing utilities |
+| Data processing | Pandas, NumPy |
+| Visualisation | Plotly and Streamlit components |
+| Configuration | Python environment variables and `python-dotenv` |
 
-- Hireability Score
-- Career Coach
-- Skill Gap Analysis
-- Personalized Learning Roadmap
-- Company Match Suggestions
-- Certification Recommendations
-- Career Personalization
+## Project structure
 
----
-
-## 🎤 Interview Preparation
-
-- AI Interview Questions
-- Technical Questions
-- HR Questions
-- Behavioral Questions
-- Resume-Based Questions
-
----
-
-## 📄 AI Document Generation
-
-- ATS Optimized Resume Rewrite
-- AI Cover Letter Generator
-
----
-
-# 🖥 Dashboard
-
-The application is organized into multiple workspaces.
-
-```
-🏠 Dashboard
-👤 Resume
-✨ Rewrite
-🚀 Career
-🎤 Interview
-📄 Documents
-```
-
-Each workspace focuses on a specific stage of the hiring process.
-
----
-
-# 🧠 Analysis Pipeline
-
-```
-Resume
-      │
-      ▼
-Resume Parsing
-      │
-      ▼
-Job Description Parsing
-      │
-      ▼
-ATS Analysis
-      │
-      ▼
-Skill Gap Detection
-      │
-      ▼
-Learning Roadmap
-      │
-      ▼
-Career Intelligence
-      │
-      ▼
-Hireability Analysis
-      │
-      ▼
-Company Matching
-      │
-      ▼
-Certification Intelligence
-      │
-      ▼
-AI Resume Review
-      │
-      ▼
-Resume Rewrite
-      │
-      ▼
-Recommendations
-      │
-      ▼
-Interview Questions
-      │
-      ▼
-Cover Letter
-```
-
----
-
-# 🏗 Project Structure
-
-```
+```text
 HireMate/
-
-│
 ├── app.py
-│
+├── config.py
+├── requirements.txt
+├── .env.example
 ├── components/
-│
+│   ├── dashboard/
+│   ├── layout/
+│   ├── ui/
+│   └── widgets/
+├── data/
 ├── models/
-│
 ├── services/
-│
 ├── styles/
-│
 ├── utils/
-│
 ├── views/
-│
-├── assets/
-│
-└── requirements.txt
+│   └── dashboard_modules/
+│       └── tabs/
+└── docs/
 ```
 
----
+## Getting started
 
-# 🛠 Technology Stack
-
-## Frontend
-
-- Streamlit
-
-## Backend
-
-- Python
-
-## AI
-
-- Groq LLM
-
-## Data Processing
-
-- PDF Parsing
-- NLP
-- JSON Processing
-
-## Visualization
-
-- Plotly
-- Streamlit Charts
-
----
-
-# 📊 Core Services
-
-- Resume Service
-- ATS Service
-- Skill Gap Service
-- Roadmap Service
-- Career Intelligence Service
-- Hireability Service
-- Company Match Service
-- Certification Service
-- Career Coach Service
-- Recommendation Service
-- Interview Service
-- Rewrite Service
-- AI Service
-
----
-
-# 📸 Screenshots
-
-Add screenshots here.
-
-Example:
-
-```
-assets/screenshots/dashboard.png
-assets/screenshots/resume.png
-assets/screenshots/rewrite.png
-assets/screenshots/career.png
-```
-
----
-
-# ⚙ Installation
-
-Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Prabol77/HireMate.git
+git clone https://github.com/HemanRajkumar/Hiremate.git
+cd Hiremate
 ```
 
-Move into the project
+### 2. Create a virtual environment
+
+**Windows PowerShell**
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell does not allow activation, you can run the environment's Python executable directly using `.venv\Scripts\python.exe`.
+
+**macOS / Linux**
 
 ```bash
-cd HireMate
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-Install dependencies
+### 3. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-Run the application
+### 4. Configure the Groq API key
+
+Create a file named `.env` in the project root. Add your own Groq API key:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+The project reads this value from the environment. Keep `.env` private and never commit it to GitHub. The `.env.example` file is provided as a configuration template.
+
+### 5. Run the application
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
----
+Streamlit will print a local URL in the terminal, usually:
 
-# 🤝 Contributing
+```text
+http://localhost:8501
+```
 
-Contributions are welcome.
+Open that address in your browser.
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push your branch
-5. Open a Pull Request
+## How to use HireMate
 
----
+1. Start the application.
+2. Open the Dashboard.
+3. Upload your resume in PDF format.
+4. Upload the target job description in PDF or TXT format.
+5. Run the analysis.
+6. Review the ATS-oriented results, matched skills, and missing skills.
+7. Explore the Resume, Rewrite, Career, Interview, and Documents workspaces.
+8. Use the recommendations to plan improvements to your resume and preparation.
 
-# 📄 License
+For best results, use a readable, text-based PDF resume and a job description that clearly lists responsibilities and required qualifications.
 
-This project is licensed under the MIT License.
+## Configuration
 
----
+Application configuration is defined in `config.py`.
 
-# 👨‍💻 Developer
+| Setting | Description |
+|---|---|
+| `GROQ_API_KEY` | API key used for Groq-powered AI features |
+| `GROQ_MODEL` | Groq model configured by the application |
+| `TEMPERATURE` | Generation temperature |
+| `MAX_TOKENS` | Maximum response token setting |
+| `SUPPORTED_RESUME_TYPES` | Accepted resume upload types |
+| `SUPPORTED_JD_TYPES` | Accepted target job-description upload types |
 
-**Prabol Pangmi**
+The current configuration accepts PDF resumes and PDF or TXT job descriptions.
 
-B.Tech CSE (AI & ML)
+## Troubleshooting
 
-Lovely Professional University
+### `streamlit` command is not recognized
 
-GitHub: https://github.com/Prabol77
+Run Streamlit through Python instead:
+
+```bash
+python -m streamlit run app.py
+```
+
+### Windows blocks `streamlit.exe`
+
+If Windows Application Control blocks the executable, do not attempt to bypass your organization's security policy. Try the Python module command above. If the policy also blocks Python execution, contact your device administrator.
+
+### `GROQ_API_KEY not found in .env`
+
+- Confirm that `.env` is in the same directory as `app.py`.
+- Confirm the variable is spelled exactly as `GROQ_API_KEY`.
+- Restart the Streamlit application after changing the file.
+- Do not add quotation marks unless required by your environment setup.
+
+### Dependency installation fails
+
+Confirm that the intended virtual environment is active and that the correct Python version is installed. Then retry:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Security and privacy
+
+- Do not commit `.env`, API keys, passwords, or Streamlit secrets.
+- Do not commit private resumes, uploaded job descriptions, or generated documents containing personal information.
+- Review `.gitignore` before pushing changes.
+- Use API credentials only in your local environment or an appropriately secured deployment secret store.
+
+## Development
+
+Before committing changes, check the working tree:
+
+```bash
+git status
+```
+
+Run the application locally and test the resume upload, job-description upload, analysis flow, and each dashboard workspace affected by your changes.
+
+## Contributing
+
+Contributions and suggestions are welcome. For a change:
+
+1. Create a branch.
+2. Make a focused update.
+3. Test the affected workflow.
+4. Commit with a descriptive message.
+5. Open a pull request describing the change.
+
+## License
+
+This project is distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-### ⭐ If you found this project useful, consider giving it a star.
+**HireMate — make every application more intentional.**
 
-**HireMate v1.0.0 — AI Resume Intelligence Platform**
+Built with Python, Streamlit, and AI.
 
 </div>
