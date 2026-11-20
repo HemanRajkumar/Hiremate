@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """Coordinate resume section extraction and typed parsing."""
 from models.resume_model import ResumeData
 from services.skill_service import SkillService
@@ -42,7 +42,7 @@ class ResumeService:
         resume.skills = self.skill_service.extract_skills(text)
         resume.metadata = self.metadata_service.generate(resume)
         return resume
-=======
+
 """
 Resume Service.
 
@@ -193,4 +193,3 @@ class ResumeService:
         )
 
         return resume
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
