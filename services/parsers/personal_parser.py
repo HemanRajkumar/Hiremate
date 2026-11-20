@@ -199,6 +199,7 @@ class PersonalParser:
     # Location
     # =====================================================
 
+<<<<<<< HEAD
     def extract_location(self, text, resume):
         """Only accept an explicitly labelled location; never infer it from skill lists."""
         for line in text.splitlines()[:20]:
@@ -206,3 +207,38 @@ class PersonalParser:
             if match:
                 resume.personal_info.location = match.group(1).strip()
                 return
+=======
+    def extract_location(
+        self,
+        text,
+        resume,
+    ):
+
+        lines = text.splitlines()
+
+        for line in lines[:15]:
+
+            line = line.strip()
+
+            if not line:
+
+                continue
+
+            if "," in line:
+
+                if any(
+
+                    char.isdigit()
+
+                    for char in line
+
+                ):
+
+                    continue
+
+                if len(line.split()) <= 6:
+
+                    resume.personal_info.location = line
+
+                    return
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

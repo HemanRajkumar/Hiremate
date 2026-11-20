@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Extract programming languages from the Skills section and spoken languages from Languages."""
 import re
 
@@ -35,3 +36,34 @@ class LanguageParser:
             line = re.sub(r"^(?:spoken languages|languages)\s*:\s*", "", line, flags=re.I)
             spoken.extend(x.strip() for x in line.split(",") if x.strip())
         resume.languages = list(dict.fromkeys(spoken))
+=======
+"""
+Language Parser.
+"""
+
+
+class LanguageParser:
+
+    def parse(
+        self,
+        resume,
+    ):
+
+        section = resume.sections.get(
+            "languages",
+            "",
+        )
+
+        if not section:
+            return
+
+        for line in section.splitlines():
+
+            line = line.strip()
+
+            if line:
+
+                resume.languages.append(
+                    line,
+                )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

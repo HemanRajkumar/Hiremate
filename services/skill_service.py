@@ -30,6 +30,7 @@ class SkillService:
 
         for skill in self.skill_list:
 
+<<<<<<< HEAD
             # Word boundaries fail for symbols such as C++ and C#. Use
             # alphanumeric lookarounds, and prevent the C token matching C++.
             pattern = rf"(?<![a-z0-9_]){re.escape(skill)}(?![a-z0-9_])"
@@ -37,5 +38,11 @@ class SkillService:
                 pattern += r"(?!\+\+)"
             if re.search(pattern, text, re.IGNORECASE):
                 detected.append(skill.upper() if skill.lower() == "c++" else skill.title())
+=======
+            pattern = rf"\b{re.escape(skill)}\b"
+
+            if re.search(pattern, text):
+                detected.append(skill.title())
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         return sorted(set(detected))

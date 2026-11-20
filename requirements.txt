@@ -120,7 +120,11 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 SQLAlchemy==2.0.51
 srsly==2.5.3
+<<<<<<< HEAD
 starlette==0.50.0
+=======
+starlette==1.3.1
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 streamlit==1.58.0
 streamlit-extras==1.6.0
 streamlit-option-menu==0.4.0
@@ -148,5 +152,8 @@ wrapt==2.2.2
 xxhash==3.8.0
 yarl==1.24.2
 zstandard==0.25.0
+<<<<<<< HEAD
 
 fastapi==0.128.2
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

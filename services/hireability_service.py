@@ -28,6 +28,7 @@ class HireabilityService:
             ats_result.skills_score
         )
 
+<<<<<<< HEAD
         score.matched_skills = list(ats_result.matched_skills)
         score.missing_skills = list(ats_result.missing_skills)
         score.candidate_skills = list(ats_result.candidate_skills)
@@ -42,6 +43,8 @@ class HireabilityService:
         )
         score.lacking = list(score.missing_skills)
 
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
         score.projects = int(
             ats_result.projects_score
         )
@@ -115,6 +118,7 @@ class HireabilityService:
             else ["No major weaknesses detected."]
         )
 
+<<<<<<< HEAD
         score.assessment_breakdown = {
             "Resume completeness": score.resume,
             "Overall ATS score": score.ats,
@@ -134,5 +138,16 @@ class HireabilityService:
             score.next_actions.insert(0, "Add a specific job description to identify exact matched and missing requirements.")
         elif not score.missing_skills:
             score.next_actions.insert(0, "Maintain your current skill coverage and deepen your strongest skills.")
+=======
+        score.next_actions = [
+
+            "Improve your missing technical skills.",
+
+            "Complete your learning roadmap.",
+
+            "Practice interview questions.",
+
+        ]
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         return score

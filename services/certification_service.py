@@ -75,6 +75,7 @@ class CertificationService:
 
             )
 
+<<<<<<< HEAD
         if not recommendations:
             domain = " ".join(ats_result.candidate_skills).lower()
             fallback = [
@@ -83,4 +84,6 @@ class CertificationService:
             ]
             if any(term in domain for term in ["pandas", "numpy", "matplotlib", "scikit-learn"]):
                 recommendations = [CertificationRecommendation(name=name, provider=provider, description=description, difficulty="Intermediate", estimated_duration="2-4 months", expected_score_gain=8, target_companies=(["IBM", "Accenture", "Infosys", "TCS"] if provider == "IBM" else ["Google", "Microsoft", "Amazon", "Adobe"]), skills_covered=skills, priority="Medium") for name, provider, description, skills in fallback]
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
         return recommendations

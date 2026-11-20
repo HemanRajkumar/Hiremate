@@ -77,9 +77,12 @@ class ATSService:
 
         }
 
+<<<<<<< HEAD
         result.candidate_skills = sorted(resume_skills)
         result.required_skills = sorted(jd)
 
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
         matched = sorted(
             resume_skills & jd
         )
@@ -93,7 +96,11 @@ class ATSService:
 
         if not jd:
 
+<<<<<<< HEAD
             return 0
+=======
+            return 100
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         return len(matched) / len(jd) * 100
 

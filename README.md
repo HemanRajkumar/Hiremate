@@ -144,6 +144,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 The project reads this value from the environment. Keep `.env` private and never commit it to GitHub. The `.env.example` file is provided as a configuration template.
 
+<<<<<<< HEAD
 ### 5. Start the React frontend and FastAPI backend
 
 Start the backend from the repository root:
@@ -173,6 +174,21 @@ docker compose up --build
 - FastAPI docs: `http://localhost:8000/docs`
 
 The frontend is built into static assets and served by Nginx. Nginx forwards `/api` requests to the FastAPI service.
+=======
+### 5. Run the application
+
+```bash
+python -m streamlit run app.py
+```
+
+Streamlit will print a local URL in the terminal, usually:
+
+```text
+http://localhost:8501
+```
+
+Open that address in your browser.
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 ## How to use HireMate
 
@@ -209,15 +225,20 @@ The current configuration accepts PDF resumes and PDF or TXT job descriptions.
 Run Streamlit through Python instead:
 
 ```bash
+<<<<<<< HEAD
 cd frontend
 npm install
 npm run dev
+=======
+python -m streamlit run app.py
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 ```
 
 ### Windows blocks `streamlit.exe`
 
 If Windows Application Control blocks the executable, do not attempt to bypass your organization's security policy. Try the Python module command above. If the policy also blocks Python execution, contact your device administrator.
 
+<<<<<<< HEAD
 ### Full AI report setup
 
 The Resume page's **Run full AI report** button requires a valid Groq API key. From the project root, copy `.env.example` to `.env` and replace the placeholder with your own key:
@@ -228,6 +249,8 @@ GROQ_API_KEY=your_real_groq_api_key
 
 Keep this key in the backend environment only; never put it in `frontend/.env` or a `VITE_` variable. Restart the backend after changing `.env`. The API status pill reports whether the AI key is configured. The report appears below the ATS metrics on the Resume page after generation.
 
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 ### `GROQ_API_KEY not found in .env`
 
 - Confirm that `.env` is in the same directory as `app.py`.
@@ -283,6 +306,7 @@ This project is distributed under the MIT License. See [LICENSE](LICENSE) for de
 Built with Python, Streamlit, and AI.
 
 </div>
+<<<<<<< HEAD
 
 ## Full-stack frontend and backend
 
@@ -337,3 +361,5 @@ npm run dev
 ```
 
 Open `http://localhost:5173`. For a containerized deployment, run `docker compose up --build` and open `http://localhost:3000`. The React frontend is served by Nginx and the `/api` requests are proxied to FastAPI.
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

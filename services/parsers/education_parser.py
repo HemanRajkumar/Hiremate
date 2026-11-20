@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Group institution, location, degree, grade and date lines into education records."""
 import re
 from models.resume_model import Education
@@ -37,3 +38,39 @@ class EducationParser:
         if current:
             records.append(current)
         resume.education = [r for r in records if r.institution or r.degree]
+=======
+"""
+Education Parser.
+"""
+
+from models.resume_model import Education
+
+
+class EducationParser:
+
+    def parse(
+        self,
+        resume,
+    ):
+
+        section = resume.sections.get(
+            "education",
+            "",
+        )
+
+        if not section:
+            return
+
+        for line in section.splitlines():
+
+            line = line.strip()
+
+            if not line:
+                continue
+
+            resume.education.append(
+                Education(
+                    degree=line,
+                )
+            )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

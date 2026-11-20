@@ -5,6 +5,7 @@ from services.skill_service import SkillService
 
 
 class JDService:
+<<<<<<< HEAD
     ROLE_SKILL_PROFILES = {
         "data science": ["Python", "SQL", "Pandas", "NumPy", "Statistics", "Scikit-learn", "Matplotlib", "Data Visualization", "Machine Learning"],
         "data scientist": ["Python", "SQL", "Pandas", "NumPy", "Statistics", "Scikit-learn", "Matplotlib", "Data Visualization", "Machine Learning"],
@@ -16,6 +17,8 @@ class JDService:
         "devops": ["Linux", "Git", "Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"]
     }
 
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
     """
     Service responsible for extracting structured information
     from a Job Description (JD).
@@ -117,9 +120,12 @@ class JDService:
         # Skills
         # -----------------------------
         job.skills = self.extract_skills(clean_text)
+<<<<<<< HEAD
         if not job.skills and len(clean_text.split()) <= 8:
             role_key = clean_text.lower().strip(" .-")
             job.skills = list(self.ROLE_SKILL_PROFILES.get(role_key, []))
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         # -----------------------------
         # Basic keyword extraction (light enhancement)

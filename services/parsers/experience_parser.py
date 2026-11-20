@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Parse work and internship entries into structured records."""
 import re
 from models.resume_model import Experience
@@ -28,3 +29,39 @@ class ExperienceParser:
         if current:
             entries.append(current)
         resume.experience = entries
+=======
+"""
+Experience Parser.
+"""
+
+from models.resume_model import Experience
+
+
+class ExperienceParser:
+
+    def parse(
+        self,
+        resume,
+    ):
+
+        section = resume.sections.get(
+            "experience",
+            "",
+        )
+
+        if not section:
+            return
+
+        for line in section.splitlines():
+
+            line = line.strip()
+
+            if not line:
+                continue
+
+            resume.experience.append(
+                Experience(
+                    company=line,
+                )
+            )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

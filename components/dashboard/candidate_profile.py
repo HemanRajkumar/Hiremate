@@ -90,10 +90,17 @@ def _render_education(items):
             )
 
             if edu.institution:
+<<<<<<< HEAD
                 st.caption(edu.institution)
 
             if edu.location:
                 st.caption(f"📍 {edu.location}")
+=======
+
+                st.caption(
+                    edu.institution
+                )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
             years = []
 
@@ -109,6 +116,7 @@ def _render_education(items):
                     edu.end_year
                 )
 
+<<<<<<< HEAD
             if edu.date_range:
                 st.caption(f"📅 {edu.date_range}")
             elif years:
@@ -116,6 +124,19 @@ def _render_education(items):
 
             if edu.cgpa:
                 st.write(f"**Grade:** {edu.cgpa}")
+=======
+            if years:
+
+                st.write(
+                    " - ".join(years)
+                )
+
+            if edu.cgpa:
+
+                st.write(
+                    f"CGPA : {edu.cgpa}"
+                )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 # ==========================================================
@@ -149,12 +170,26 @@ def _render_experience(items):
                     exp.company
                 )
 
+<<<<<<< HEAD
             if exp.location:
                 st.caption(f"📍 {exp.location}")
             if exp.date_range or exp.duration:
                 st.caption(f"📅 {exp.date_range or exp.duration}")
             for bullet in (exp.bullets or ([exp.description] if exp.description else [])):
                 st.markdown(f"- {bullet}")
+=======
+            if exp.duration:
+
+                st.write(
+                    exp.duration
+                )
+
+            if exp.description:
+
+                st.write(
+                    exp.description
+                )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 # ==========================================================
@@ -200,6 +235,7 @@ def _render_string_list(
         return
 
     for item in items:
+<<<<<<< HEAD
         st.markdown(f"- {item}")
 
 
@@ -242,6 +278,12 @@ def _render_training(items):
                 st.caption(f"📅 {item.date}")
             for bullet in item.bullets:
                 st.markdown(f"- {bullet}")
+=======
+
+        st.markdown(
+            f"• {item}"
+        )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 # ==========================================================
@@ -439,11 +481,19 @@ def render_candidate_profile(
     # Certifications
     # ======================================================
 
+<<<<<<< HEAD
     _render_certifications(resume_data.certifications)
 
     st.divider()
 
     _render_training(getattr(resume_data, "training", []))
+=======
+    _render_string_list(
+        "🏆 Certifications",
+        resume_data.certifications,
+        "No certifications found.",
+    )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
     st.divider()
 
@@ -451,6 +501,7 @@ def render_candidate_profile(
     # Languages
     # ======================================================
 
+<<<<<<< HEAD
     st.subheader("🌍 Languages")
 
     programming_languages = getattr(resume_data, "programming_languages", [])
@@ -466,6 +517,13 @@ def render_candidate_profile(
 
     if not programming_languages and not spoken_languages:
         st.info("No languages found in the uploaded resume.")
+=======
+    _render_string_list(
+        "🌍 Languages",
+        resume_data.languages,
+        "No languages found.",
+    )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
     st.divider()
 

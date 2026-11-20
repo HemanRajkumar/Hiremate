@@ -33,6 +33,7 @@ class ATSResult:
         default_factory=list
     )
 
+<<<<<<< HEAD
     candidate_skills: List[str] = field(
         default_factory=list
     )
@@ -41,6 +42,8 @@ class ATSResult:
         default_factory=list
     )
 
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
     # AI Explanation
 
     strengths: List[str] = field(

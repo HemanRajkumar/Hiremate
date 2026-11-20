@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 
 from dotenv import load_dotenv
@@ -6,6 +7,16 @@ from groq import Groq
 from config import GROQ_MODEL, MAX_TOKENS, TEMPERATURE
 
 load_dotenv()
+=======
+from groq import Groq
+
+from config import (
+    GROQ_API_KEY,
+    GROQ_MODEL,
+    MAX_TOKENS,
+    TEMPERATURE,
+)
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 class GroqService:
@@ -14,6 +25,7 @@ class GroqService:
     """
 
     def __init__(self):
+<<<<<<< HEAD
         # Read the key at runtime rather than relying on a value captured when
         # config.py was first imported. This also supports environment injection
         # by Docker, IDEs, and deployment platforms.
@@ -25,6 +37,15 @@ class GroqService:
 
         self.client = Groq(
             api_key=api_key,
+=======
+        if not GROQ_API_KEY:
+            raise ValueError(
+                "GROQ_API_KEY not found in .env"
+            )
+
+        self.client = Groq(
+            api_key=GROQ_API_KEY,
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
             timeout=60.0,
             max_retries=2,
         )
@@ -33,7 +54,10 @@ class GroqService:
         self,
         system_prompt: str,
         user_prompt: str,
+<<<<<<< HEAD
         max_tokens: int | None = None,
+=======
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
     ) -> str:
         """
         Send a chat request to Groq.
@@ -43,7 +67,11 @@ class GroqService:
             response = self.client.chat.completions.create(
                 model=GROQ_MODEL,
                 temperature=TEMPERATURE,
+<<<<<<< HEAD
                 max_tokens=max_tokens or MAX_TOKENS,
+=======
+                max_tokens=MAX_TOKENS,
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
                 messages=[
                     {
                         "role": "system",
@@ -56,10 +84,14 @@ class GroqService:
                 ],
             )
 
+<<<<<<< HEAD
             content = response.choices[0].message.content
             if not content or not content.strip():
                 raise RuntimeError("Groq returned an empty response. Try again or reduce the input size.")
             return content.strip()
+=======
+            return response.choices[0].message.content
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         except Exception as error:
             print("\n========== GROQ ERROR ==========")

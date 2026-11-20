@@ -64,6 +64,7 @@ All notable changes to HireMate will be documented in this file.
 - Streamlit multipage navigation conflict
 - Import path issues after folder restructuring
 - SkillService initialization bug
+<<<<<<< HEAD
 - Package initialization errors
 ## Company matching and recommendation completeness
 - Added role-based baseline skill requirements for short target-role inputs such as `Data Science`, so ATS and hireability comparisons no longer show an empty 0% skill result for a role-only target.
@@ -72,3 +73,6 @@ All notable changes to HireMate will be documented in this file.
 - Added domain-relevant certification fallbacks when no missing-skill-specific certification is found.
 - Ensured the learning roadmap includes practical steps when there are no detected skill gaps.
 - Added a dedicated company match card layout with separate skill, ATS, and hireability scores.
+=======
+- Package initialization errors
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

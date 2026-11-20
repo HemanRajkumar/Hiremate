@@ -69,9 +69,15 @@ class MetadataService:
             resume.education
         )
 
+<<<<<<< HEAD
         metadata["certification_count"] = len(resume.certifications)
         metadata["training_count"] = len(getattr(resume, "training", []))
         metadata["achievement_count"] = len(resume.achievements)
+=======
+        metadata["certification_count"] = len(
+            resume.certifications
+        )
+>>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         metadata["profile_completion"] = (
             self.profile_completion(
