@@ -94,7 +94,6 @@ class ATSService:
         if not jd:
 
             return 0
-            return 100
 
         return len(matched) / len(jd) * 100
 

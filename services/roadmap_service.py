@@ -111,9 +111,5 @@ class RoadmapService:
                 roadmap.tasks.append(LearningTask(week=index, title=title, description=description, estimated_hours=6))
 
         roadmap.duration_weeks = max(week - 1, len(roadmap.tasks), 1)
-        roadmap.duration_weeks = max(
-            week - 1,
-            1,
-        )
 
         return roadmap

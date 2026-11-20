@@ -37,9 +37,5 @@ class SkillService:
                 pattern += r"(?!\+\+)"
             if re.search(pattern, text, re.IGNORECASE):
                 detected.append(skill.upper() if skill.lower() == "c++" else skill.title())
-            pattern = rf"\b{re.escape(skill)}\b"
-
-            if re.search(pattern, text):
-                detected.append(skill.title())
 
         return sorted(set(detected))

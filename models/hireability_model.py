@@ -56,4 +56,3 @@ class HireabilityScore:
     assessment_breakdown: dict = field(default_factory=dict)
 
     lacking: list[str] = field(default_factory=list)
-    )

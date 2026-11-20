@@ -173,19 +173,6 @@ docker compose up --build
 - FastAPI docs: `http://localhost:8000/docs`
 
 The frontend is built into static assets and served by Nginx. Nginx forwards `/api` requests to the FastAPI service.
-### 5. Run the application
-
-```bash
-python -m streamlit run app.py
-```
-
-Streamlit will print a local URL in the terminal, usually:
-
-```text
-http://localhost:8501
-```
-
-Open that address in your browser.
 
 ## How to use HireMate
 
@@ -225,7 +212,6 @@ Run Streamlit through Python instead:
 cd frontend
 npm install
 npm run dev
-python -m streamlit run app.py
 ```
 
 ### Windows blocks `streamlit.exe`

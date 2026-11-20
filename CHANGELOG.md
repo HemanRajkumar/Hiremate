@@ -72,4 +72,3 @@ All notable changes to HireMate will be documented in this file.
 - Added domain-relevant certification fallbacks when no missing-skill-specific certification is found.
 - Ensured the learning roadmap includes practical steps when there are no detected skill gaps.
 - Added a dedicated company match card layout with separate skill, ATS, and hireability scores.
-- Package initialization errors

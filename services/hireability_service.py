@@ -134,14 +134,5 @@ class HireabilityService:
             score.next_actions.insert(0, "Add a specific job description to identify exact matched and missing requirements.")
         elif not score.missing_skills:
             score.next_actions.insert(0, "Maintain your current skill coverage and deepen your strongest skills.")
-        score.next_actions = [
-
-            "Improve your missing technical skills.",
-
-            "Complete your learning roadmap.",
-
-            "Practice interview questions.",
-
-        ]
 
         return score

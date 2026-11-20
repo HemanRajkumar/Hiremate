@@ -122,9 +122,6 @@ class CareerIntelligenceService:
                 "Add measurable results to your project descriptions.",
                 "Include internship, freelance, or practical experience where applicable.",
             ]
-            gap.skill
-            for gap in skill_gap.high_priority
-        ]
 
         # ==================================================
         # Next Learning Steps
@@ -158,7 +155,6 @@ class CareerIntelligenceService:
             "Build a portfolio project that solves a real-world problem",
             "Create an end-to-end application and document its architecture",
         ])
-        career.recommended_projects = []
 
         # ==================================================
         # Recommended Certifications
@@ -175,6 +171,5 @@ class CareerIntelligenceService:
             "Choose a recognized certification aligned with your target role",
             "Complete a practical course that includes a portfolio project",
         ])
-        career.recommended_certifications = []
 
         return career

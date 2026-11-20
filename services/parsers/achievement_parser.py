@@ -21,32 +21,3 @@ class AchievementParser:
             details = parts[2] if len(parts) > 2 else ""
             results.append(Achievement(title=title, issuer=issuer, date=date, details=details))
         resume.achievements = results
-"""
-Achievement Parser.
-"""
-
-
-class AchievementParser:
-
-    def parse(
-        self,
-        resume,
-    ):
-
-        section = resume.sections.get(
-            "achievements",
-            "",
-        )
-
-        if not section:
-            return
-
-        for line in section.splitlines():
-
-            line = line.strip()
-
-            if line:
-
-                resume.achievements.append(
-                    line,
-                )

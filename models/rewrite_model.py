@@ -12,20 +12,3 @@ class RewriteResult:
     skills: Any = field(default_factory=list)
     suggestions: list[str] = field(default_factory=list)
     ats_improvement: str = ""
-    """
-    AI rewritten resume.
-    """
-
-    professional_summary: str = ""
-
-    experience: str = ""
-
-    projects: str = ""
-
-    skills: str = ""
-
-    suggestions: list[str] = field(
-        default_factory=list,
-    )
-
-    ats_improvement: str = ""

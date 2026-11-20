@@ -122,9 +122,6 @@ class CompanyMatchService:
                         if not missing else
                         "Prioritize learning " + ", ".join(missing[:5]) + ". Add a project demonstrating them."
                     ),
-                    missing_skills=missing,
-
-                    recommendation=recommendation,
 
                 )
 

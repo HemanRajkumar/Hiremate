@@ -95,10 +95,6 @@ def _render_education(items):
             if edu.location:
                 st.caption(f"📍 {edu.location}")
 
-                st.caption(
-                    edu.institution
-                )
-
             years = []
 
             if edu.start_year:
@@ -120,17 +116,6 @@ def _render_education(items):
 
             if edu.cgpa:
                 st.write(f"**Grade:** {edu.cgpa}")
-            if years:
-
-                st.write(
-                    " - ".join(years)
-                )
-
-            if edu.cgpa:
-
-                st.write(
-                    f"CGPA : {edu.cgpa}"
-                )
 
 
 # ==========================================================
@@ -170,17 +155,6 @@ def _render_experience(items):
                 st.caption(f"📅 {exp.date_range or exp.duration}")
             for bullet in (exp.bullets or ([exp.description] if exp.description else [])):
                 st.markdown(f"- {bullet}")
-            if exp.duration:
-
-                st.write(
-                    exp.duration
-                )
-
-            if exp.description:
-
-                st.write(
-                    exp.description
-                )
 
 
 # ==========================================================
@@ -268,10 +242,6 @@ def _render_training(items):
                 st.caption(f"📅 {item.date}")
             for bullet in item.bullets:
                 st.markdown(f"- {bullet}")
-
-        st.markdown(
-            f"• {item}"
-        )
 
 
 # ==========================================================
@@ -474,11 +444,6 @@ def render_candidate_profile(
     st.divider()
 
     _render_training(getattr(resume_data, "training", []))
-    _render_string_list(
-        "🏆 Certifications",
-        resume_data.certifications,
-        "No certifications found.",
-    )
 
     st.divider()
 
@@ -501,11 +466,6 @@ def render_candidate_profile(
 
     if not programming_languages and not spoken_languages:
         st.info("No languages found in the uploaded resume.")
-    _render_string_list(
-        "🌍 Languages",
-        resume_data.languages,
-        "No languages found.",
-    )
 
     st.divider()
 

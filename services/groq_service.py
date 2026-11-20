@@ -6,14 +6,6 @@ from groq import Groq
 from config import GROQ_MODEL, MAX_TOKENS, TEMPERATURE
 
 load_dotenv()
-from groq import Groq
-
-from config import (
-    GROQ_API_KEY,
-    GROQ_MODEL,
-    MAX_TOKENS,
-    TEMPERATURE,
-)
 
 
 class GroqService:
@@ -33,13 +25,6 @@ class GroqService:
 
         self.client = Groq(
             api_key=api_key,
-        if not GROQ_API_KEY:
-            raise ValueError(
-                "GROQ_API_KEY not found in .env"
-            )
-
-        self.client = Groq(
-            api_key=GROQ_API_KEY,
             timeout=60.0,
             max_retries=2,
         )
@@ -59,7 +44,6 @@ class GroqService:
                 model=GROQ_MODEL,
                 temperature=TEMPERATURE,
                 max_tokens=max_tokens or MAX_TOKENS,
-                max_tokens=MAX_TOKENS,
                 messages=[
                     {
                         "role": "system",
@@ -76,7 +60,6 @@ class GroqService:
             if not content or not content.strip():
                 raise RuntimeError("Groq returned an empty response. Try again or reduce the input size.")
             return content.strip()
-            return response.choices[0].message.content
 
         except Exception as error:
             print("\n========== GROQ ERROR ==========")
