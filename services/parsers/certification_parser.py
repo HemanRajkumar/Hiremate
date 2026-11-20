@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Extract certificates with issuer and completion date when present."""
 import re
 from models.resume_model import Certification
@@ -21,7 +20,6 @@ class CertificationParser:
             issuer = parts[1] if len(parts) > 1 else ""
             results.append(Certification(title=title, issuer=issuer, date=date))
         resume.certifications = results
-=======
 """
 Certification Parser.
 """
@@ -51,4 +49,3 @@ class CertificationParser:
                 resume.certifications.append(
                     line,
                 )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

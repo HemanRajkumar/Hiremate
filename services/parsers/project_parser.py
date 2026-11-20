@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Parse project headings, dates, bullet descriptions and technology lists."""
 import re
 from models.resume_model import Project
@@ -65,7 +64,6 @@ class ProjectParser:
             if not project.description and project.bullets:
                 project.description = project.bullets[0]
         resume.projects = projects
-=======
 """
 Project Parser.
 """
@@ -100,4 +98,3 @@ class ProjectParser:
                     title=line,
                 )
             )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

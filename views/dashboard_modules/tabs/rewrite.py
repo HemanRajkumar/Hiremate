@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 """Clean, readable AI resume rewrite workspace."""
-=======
 """
 Resume Rewrite Workspace.
 """
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 import streamlit as st
 
 
-<<<<<<< HEAD
 def _plain_text(value):
     if value is None:
         return ""
@@ -208,7 +204,6 @@ def render_rewrite_tab(rewrite):
         mime="text/plain",
         use_container_width=True,
     )
-=======
 # ==========================================================
 # Resume Rewrite Workspace
 # ==========================================================
@@ -441,4 +436,3 @@ Suggestions
         mime="text/plain",
         use_container_width=True,
     )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

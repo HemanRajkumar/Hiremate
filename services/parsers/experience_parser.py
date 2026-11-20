@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Parse work and internship entries into structured records."""
 import re
 from models.resume_model import Experience
@@ -29,7 +28,6 @@ class ExperienceParser:
         if current:
             entries.append(current)
         resume.experience = entries
-=======
 """
 Experience Parser.
 """
@@ -64,4 +62,3 @@ class ExperienceParser:
                     company=line,
                 )
             )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

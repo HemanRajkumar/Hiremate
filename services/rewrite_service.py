@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Generate accurate, ATS-friendly resume rewrites."""
 
 import json
@@ -16,7 +15,6 @@ logger = logging.getLogger(__name__)
 
 class RewriteService:
     """AI resume rewrite service with tolerant response normalization."""
-=======
 """
 AI Resume Rewrite Service.
 """
@@ -38,12 +36,10 @@ class RewriteService:
     """
     AI Resume Rewrite Service.
     """
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
     def __init__(self):
         self.groq = GroqService()
 
-<<<<<<< HEAD
     def generate(self, resume_text: str, jd_text: str) -> RewriteResult:
         prompt = rewrite_prompt(resume_text, jd_text)
         try:
@@ -205,7 +201,6 @@ class RewriteService:
             ],
             ats_improvement="No ATS analysis was generated because the rewrite request failed.",
         )
-=======
     # =====================================================
     # Public API
     # =====================================================
@@ -407,4 +402,3 @@ class RewriteService:
         )
 
         return result
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

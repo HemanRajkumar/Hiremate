@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 """Typed structures for resume information extracted from source documents."""
 from dataclasses import dataclass, field
 from typing import Dict, List
 
-=======
 from dataclasses import dataclass, field
 from typing import Dict, List
 from services.metadata_service import (
     MetadataService,
 )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 @dataclass
 class PersonalInfo:
@@ -25,15 +22,12 @@ class PersonalInfo:
 class Education:
     degree: str = ""
     institution: str = ""
-<<<<<<< HEAD
     location: str = ""
     start_year: str = ""
     end_year: str = ""
     date_range: str = ""
-=======
     start_year: str = ""
     end_year: str = ""
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
     cgpa: str = ""
 
 
@@ -41,22 +35,18 @@ class Education:
 class Experience:
     company: str = ""
     role: str = ""
-<<<<<<< HEAD
     location: str = ""
     duration: str = ""
     date_range: str = ""
     description: str = ""
     bullets: List[str] = field(default_factory=list)
-=======
     duration: str = ""
     description: str = ""
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 @dataclass
 class Project:
     title: str = ""
-<<<<<<< HEAD
     date: str = ""
     location: str = ""
     description: str = ""
@@ -87,15 +77,12 @@ class Training:
     provider: str = ""
     date: str = ""
     bullets: List[str] = field(default_factory=list)
-=======
     description: str = ""
     technologies: List[str] = field(default_factory=list)
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
 
 @dataclass
 class ResumeData:
-<<<<<<< HEAD
     personal_info: PersonalInfo = field(default_factory=PersonalInfo)
     education: List[Education] = field(default_factory=list)
     experience: List[Experience] = field(default_factory=list)
@@ -108,7 +95,6 @@ class ResumeData:
     languages: List[str] = field(default_factory=list)
     sections: Dict[str, str] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
-=======
     """
     Structured representation of a parsed resume.
     """
@@ -135,4 +121,3 @@ class ResumeData:
     metadata: dict = field(
     default_factory=dict
 )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

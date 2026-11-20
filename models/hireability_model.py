@@ -39,7 +39,6 @@ class HireabilityScore:
 
     next_actions: list[str] = field(
         default_factory=list
-<<<<<<< HEAD
     )
 
     matched_skills: list[str] = field(default_factory=list)
@@ -57,6 +56,4 @@ class HireabilityScore:
     assessment_breakdown: dict = field(default_factory=dict)
 
     lacking: list[str] = field(default_factory=list)
-=======
     )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

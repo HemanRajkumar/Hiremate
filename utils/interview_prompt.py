@@ -26,11 +26,8 @@ def interview_prompt(
             {
                 "title": p.title,
                 "description": p.description,
-<<<<<<< HEAD
                 "bullets": p.bullets,
                 "date": p.date,
-=======
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
                 "technologies": p.technologies,
             }
             for p in resume_data.projects

@@ -113,7 +113,6 @@ class CompanyMatchService:
                         hireability.overall
                     ),
 
-<<<<<<< HEAD
                     matched_skills=matched,
                     missing_skills=missing,
                     required_skills=required_skills,
@@ -123,11 +122,9 @@ class CompanyMatchService:
                         if not missing else
                         "Prioritize learning " + ", ".join(missing[:5]) + ". Add a project demonstrating them."
                     ),
-=======
                     missing_skills=missing,
 
                     recommendation=recommendation,
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
                 )
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from models.project_recommendation_model import ProjectRecommendation
 
 
@@ -25,7 +24,6 @@ class ProjectRecommendationService:
             ("Practical skills demonstration", "Create a smaller project with tests, clear documentation, and a public demo.", list(ats_result.missing_skills[:3]) or list(ats_result.candidate_skills[:3]), "Beginner", "1-2 weeks"),
         ])
         return [ProjectRecommendation(title=title, description=description, technologies=skills, skills_covered=skills, difficulty=level, estimated_duration=duration, expected_score_gain=10 if i == 0 else 7, priority="High" if i == 0 else "Medium") for i, (title, description, skills, level, duration) in enumerate(ideas)]
-=======
 """
 Project Recommendation Service.
 """
@@ -54,4 +52,3 @@ class ProjectRecommendationService:
         projects = []
 
         return projects
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 """Split resume text into named sections without treating content as headings."""
 import re
-=======
 """
 Resume Section Parser.
 """
 
 import re
 
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 from services.parsers.base_parser import BaseParser
 
 
 class SectionParser(BaseParser):
-<<<<<<< HEAD
     SECTION_HEADERS = {
         "summary": {"summary", "professional summary", "objective", "profile", "about"},
         "skills": {"skills", "technical skills", "core skills"},
@@ -47,7 +43,6 @@ class SectionParser(BaseParser):
                 resume.sections.setdefault(current, "")
                 continue
             resume.sections[current] = resume.sections.get(current, "") + line + "\n"
-=======
     """
     Detect and split resume into sections.
     """
@@ -147,4 +142,3 @@ class SectionParser(BaseParser):
             resume.sections[current_section] += (
                 line + "\n"
             )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

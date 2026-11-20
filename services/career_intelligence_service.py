@@ -107,7 +107,6 @@ class CareerIntelligenceService:
         # ==================================================
 
         career.improvement_areas = [
-<<<<<<< HEAD
             f"Strengthen {gap.skill} (high priority)"
             for gap in skill_gap.high_priority
         ] + [
@@ -123,11 +122,9 @@ class CareerIntelligenceService:
                 "Add measurable results to your project descriptions.",
                 "Include internship, freelance, or practical experience where applicable.",
             ]
-=======
             gap.skill
             for gap in skill_gap.high_priority
         ]
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         # ==================================================
         # Next Learning Steps
@@ -137,7 +134,6 @@ class CareerIntelligenceService:
             task.title
             for task in roadmap.tasks[:5]
         ]
-<<<<<<< HEAD
         if not career.next_steps:
             career.next_steps = [
                 "Choose a target role and add its job description for an accurate skills comparison.",
@@ -145,15 +141,12 @@ class CareerIntelligenceService:
                 "Add project links, tools used, and measurable outcomes to your resume.",
                 "Practice technical questions for your target role.",
             ]
-=======
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         # ==================================================
         # Recommended Projects
         # (Placeholder for v1.0.0)
         # ==================================================
 
-<<<<<<< HEAD
         domain = str(resume_data.metadata.get("primary_domain", "General")).lower()
         project_ideas = {
             "data science": ["Build an end-to-end data analytics dashboard", "Create a predictive ML project with model evaluation"],
@@ -165,16 +158,13 @@ class CareerIntelligenceService:
             "Build a portfolio project that solves a real-world problem",
             "Create an end-to-end application and document its architecture",
         ])
-=======
         career.recommended_projects = []
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         # ==================================================
         # Recommended Certifications
         # (Placeholder for v1.0.0)
         # ==================================================
 
-<<<<<<< HEAD
         cert_ideas = {
             "data science": ["IBM Data Science Professional Certificate", "Microsoft Power BI Data Analyst Associate"],
             "ai/ml": ["AWS Certified Machine Learning – Specialty (check current exam availability)", "DeepLearning.AI Machine Learning Specialization"],
@@ -185,8 +175,6 @@ class CareerIntelligenceService:
             "Choose a recognized certification aligned with your target role",
             "Complete a practical course that includes a portfolio project",
         ])
-=======
         career.recommended_certifications = []
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         return career

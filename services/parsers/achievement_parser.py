@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Parse co-curricular achievements with their organizer and date."""
 import re
 from models.resume_model import Achievement
@@ -22,7 +21,6 @@ class AchievementParser:
             details = parts[2] if len(parts) > 2 else ""
             results.append(Achievement(title=title, issuer=issuer, date=date, details=details))
         resume.achievements = results
-=======
 """
 Achievement Parser.
 """
@@ -52,4 +50,3 @@ class AchievementParser:
                 resume.achievements.append(
                     line,
                 )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029

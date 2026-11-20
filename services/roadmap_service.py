@@ -100,7 +100,6 @@ class RoadmapService:
 
                     week += 1
 
-<<<<<<< HEAD
         if not roadmap.tasks:
             domain_tasks = [
                 ("Strengthen core role skills", "Review the core concepts and practice with focused exercises."),
@@ -112,11 +111,9 @@ class RoadmapService:
                 roadmap.tasks.append(LearningTask(week=index, title=title, description=description, estimated_hours=6))
 
         roadmap.duration_weeks = max(week - 1, len(roadmap.tasks), 1)
-=======
         roadmap.duration_weeks = max(
             week - 1,
             1,
         )
->>>>>>> 0ae423da1a6854376a84145ea976d8dd03502029
 
         return roadmap
